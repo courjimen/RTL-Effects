@@ -11,6 +11,8 @@ afterEach(cleanup);
 // - Assert that the button is disabled initially
 test('counter starts at 0 and button is disabled', () => {
     render(<Counter/>)
+
+    expect(screen.getByTestId('count').textContent).toBe('Clicked 0 times');
     expect(screen.getByTestId('button')).toBeDisabled();
 } )
 
